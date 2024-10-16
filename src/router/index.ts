@@ -1,10 +1,4 @@
 import {createRouter, RouteRecordRaw, Router, createWebHashHistory} from "vue-router";
-import HomePage from "../views/HomePage.vue";
-import AboutPage from "../views/AboutPage.vue";
-import LandingPage from "../views/LandingPage.vue";
-import SkinAndBacteria from "../views/SkinAndBacteria.vue";
-import FementationPage from "../views/FementationPage.vue";
-import MagicMosaic from "../views/MagicMosaic.vue";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -14,7 +8,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/homepage',
         name: 'homepage',
-        component: HomePage,
+        component: () => import('../views/HomePage.vue'),
         meta: {
             keepAlive: true
         }
@@ -22,7 +16,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/about',
         name: 'about',
-        component: AboutPage,
+        component: () => import('../views/AboutPage.vue'),
         meta: {
             keepAlive: true
         }
@@ -30,7 +24,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/landing',
         name: 'landing',
-        component: LandingPage,
+        component: () => import('../views/LandingPage.vue'),
         meta: {
             keepAlive: true
         }
@@ -38,7 +32,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/skinandbacteria',
         name: 'skinandbacteria',
-        component: SkinAndBacteria,
+        component: () => import('../views/SkinAndBacteria.vue'),
         meta: {
             keepAlive: true
         }
@@ -46,7 +40,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/fementation',
         name: 'fementation',
-        component: FementationPage,
+        component: () => import('../views/FementationPage.vue'),
         meta: {
             keepAlive: true
         }
@@ -54,7 +48,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/magicmosaic',
         name: 'magicmosaic',
-        component: MagicMosaic,
+        component: () => import('../views/MagicMosaic.vue'),
         meta: {
             keepAlive: true
         }
